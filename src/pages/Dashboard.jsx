@@ -13,7 +13,7 @@ export default function Dashboard() {
       {/* 1. TOP SECTION: Welcome Text */}
       <div>
         <h1 className="text-3xl font-bold text-white tracking-tight">Project Dashboard</h1>
-        <p className="text-gray-500 mt-1 italic">Hello Alishba, welcome back to your admin panel.</p>
+        <p className="text-gray-500 mt-1 italic">Hello , welcome back to your admin panel.</p>
       </div>
 
       {/* 2. STATS SECTION: 4 Responsive Cards */}
