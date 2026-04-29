@@ -7,19 +7,21 @@ export default function Sidebar() {
 
   const menuItems = [
     { path: '/', label: 'Dashboard', icon: <BiGridAlt /> },
-    { path: '/profile', label: 'Profile', icon: <BiUser /> },
     { path: '/orders', label: 'Orders', icon: <BiCartAlt /> },
+    { path: '/products', label: 'Products', icon: <BiGridAlt /> }, 
+    {path: '/tasks', label: 'Tasks', icon: <BiGridAlt /> },
     { path: '/settings', label: 'Settings', icon: <BiCog /> },
-  ];
+    { path: '/profile', label: 'Profile', icon: <BiUser /> },
+    ];
 
   return (
-    <aside className="w-64 bg-[#11141d] h-screen p-6 border-r border-gray-800 flex flex-col fixed left-0 top-0">
+    <aside className="w-64 bg-[#11141d] h-screen p-6 border-r border-gray-800 flex flex-col fixed left-0 top-0 z-50">
       {/* 1. TOP: Logo */}
       <div className="flex items-center gap-3 mb-12 px-2">
         <div className="w-8 h-8 bg-orange-500 rounded-lg flex items-center justify-center shadow-lg shadow-orange-500/20">
           <span className="text-white font-bold">A</span>
         </div>
-        <span className="text-xl font-bold text-white tracking-tighter">ALISHBA.AI</span>
+        <span className="text-xl font-bold text-white tracking-tighter">ALISHBA</span>
       </div>
 
       {/* 2. MIDDLE: Navigation Links */}

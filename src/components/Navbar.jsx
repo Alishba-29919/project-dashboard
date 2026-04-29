@@ -27,7 +27,11 @@ export default function Navbar() {
             <p className="text-[10px] text-gray-500 font-semibold uppercase">Admin Mode</p>
           </div>
           <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-orange-600 to-yellow-400 flex items-center justify-center font-bold text-white shadow-lg">
-            A
+            <img 
+                  src="https://api.dicebear.com/7.x/avataaars/svg?seed=Alishba" 
+                  alt="Avatar" 
+                  className="w-full h-full rounded-full bg-[#11141d] object-cover"
+                />
           </div>
           <BiChevronDown className="text-gray-500" />
         </div>
