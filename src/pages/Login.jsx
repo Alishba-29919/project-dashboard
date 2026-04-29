@@ -19,14 +19,14 @@ export default function Login({ setIsLoggedIn }) {
         
         <input 
           type="email" 
-          placeholder="Email likhen" 
+          placeholder="Enter email" 
           className="w-full bg-[#0b0e14] border border-gray-800 p-4 rounded-xl mb-4 outline-none focus:border-orange-500"
           required 
         />
         
         <input 
           type="password" 
-          placeholder="Password likhen" 
+          placeholder="Enter password" 
           className="w-full bg-[#0b0e14] border border-gray-800 p-4 rounded-xl mb-6 outline-none focus:border-orange-500"
           required 
         />
