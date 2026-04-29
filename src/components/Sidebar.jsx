@@ -46,7 +46,7 @@ export default function Sidebar() {
       {/* 3. BOTTOM: New Content Section (Extra Box) */}
       <div className="mt-auto space-y-6">
         {/* Help/Upgrade Box (Inspired by Image 2) */}
-        <div className="bg-gradient-to-br from-orange-600/20 to-orange-400/5 p-4 rounded-2xl border border-orange-500/20 text-center">
+        {/* <div className="bg-gradient-to-br from-orange-600/20 to-orange-400/5 p-4 rounded-2xl border border-orange-500/20 text-center">
           <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center mx-auto -mt-8 border-4 border-[#11141d]">
              <BiQuestionMark className="text-white" />
           </div>
@@ -55,7 +55,7 @@ export default function Sidebar() {
           <button className="bg-orange-500 text-white text-[10px] font-bold py-2 px-4 rounded-lg w-full hover:bg-orange-600 transition-all">
             Get Support
           </button>
-        </div>
+        </div> */}
 
         {/* Logout Link */}
         {/* <div className="pt-4 border-t border-gray-800">
