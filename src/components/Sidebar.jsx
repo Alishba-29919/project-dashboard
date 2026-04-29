@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { BiGridAlt, BiUser, BiCartAlt, BiCog, BiLogOut, BiQuestionMark } from 'react-icons/bi';
 
+
 export default function Sidebar() {
   const location = useLocation();
 
@@ -57,12 +58,23 @@ export default function Sidebar() {
         </div>
 
         {/* Logout Link */}
-        <div className="pt-4 border-t border-gray-800">
+        {/* <div className="pt-4 border-t border-gray-800">
           <button className="flex items-center gap-4 px-4 py-2 text-gray-500 hover:text-red-400 transition-all w-full">
             <BiLogOut size={20}/>
             <span className="text-sm font-bold uppercase tracking-widest">Logout</span>
           </button>
-        </div>
+        </div> */}
+
+        // Sidebar ke return mein:
+<Link 
+  to="/logout" 
+  className="flex items-center gap-4 w-full p-4 text-gray-500 hover:text-red-500 transition-all"
+>
+  <BiLogOut size={22} />
+  <span className="font-bold">Logout</span>
+</Link>
+
+
       </div>
     </aside>
   );
