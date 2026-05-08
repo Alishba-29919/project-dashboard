@@ -1,41 +1,44 @@
 import React from 'react';
-import { BiSearch, BiBell, BiChevronDown } from 'react-icons/bi';
+import { BiSearch, BiBell, BiUser } from 'react-icons/bi';
 
 export default function Navbar() {
   return (
-    <div className="h-20 bg-[#0b0e14] border-b border-gray-800 flex items-center justify-between px-8 sticky top-0 z-50">
-      {/* Search Bar - Professional & Clean */}
-      <div className="relative w-1/3">
-        <BiSearch className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 text-lg" />
-        <input 
-          type="text" 
-          placeholder="Search analytics, tasks..." 
-          className="w-full bg-[#11141d] border border-gray-800 rounded-xl py-2 pl-10 pr-4 text-sm text-gray-300 focus:outline-none focus:border-orange-500 transition-all"
-        />
-      </div>
-
-      {/* Profile & Notifications */}
-      <div className="flex items-center gap-6">
-        <div className="relative cursor-pointer p-2 hover:bg-gray-800 rounded-full transition-all">
-          <BiBell className="text-gray-400 text-xl" />
-          <span className="absolute top-2 right-2 w-2 h-2 bg-orange-500 rounded-full border-2 border-[#0b0e14]"></span>
-        </div>
+    <nav className="sticky top-0 z-30 w-full bg-[#11141d]/80 backdrop-blur-md border-b border-gray-800 p-4">
+      <div className="flex items-center justify-between gap-4 max-w-full">
         
-        <div className="flex items-center gap-3 border-l border-gray-800 pl-6 cursor-pointer group">
-          <div className="text-right">
-            <p className="text-sm font-bold text-white group-hover:text-orange-500 transition-all">Alishba Abbas</p>
-            <p className="text-[10px] text-gray-500 font-semibold uppercase">Admin Mode</p>
+        {/* 1. SEARCH BAR (Mobile par width adjust ho rahi hai) */}
+        <div className="flex-1 max-w-[150px] sm:max-w-xs md:max-w-md relative ml-12 md:ml-0">
+          <input 
+            type="text" 
+            placeholder="Search analytics..." 
+            className="w-full bg-[#1b1f29] text-gray-300 p-2.5 pl-10 rounded-2xl text-sm outline-none border border-transparent focus:border-orange-500/50 transition-all"
+          />
+          <BiSearch className="absolute left-3 top-3 text-gray-500" size={18} />
+        </div>
+
+        {/* 2. RIGHT SIDE: Notifications & Profile */}
+        <div className="flex items-center gap-3 md:gap-6">
+          {/* Notification Icon (Mobile par chupa sakte hain) */}
+          <button className="relative p-2 text-gray-400 hover:text-orange-500 transition-colors hidden sm:block">
+            <BiBell size={24} />
+            <span className="absolute top-2 right-2 w-2 h-2 bg-orange-500 rounded-full border-2 border-[#11141d]"></span>
+          </button>
+
+          {/* User Profile */}
+          <div className="flex items-center gap-3 border-l border-gray-800 pl-4 md:pl-6">
+            <div className="text-right hidden lg:block">
+              <p className="text-white text-sm font-bold leading-none">Alishba Abbas</p>
+              <p className="text-orange-500 text-[10px] font-bold uppercase tracking-widest mt-1">Admin Mode</p>
+            </div>
+            <div className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-orange-500 to-yellow-400 p-[2px]">
+              <div className="w-full h-full bg-[#1b1f29] rounded-[14px] flex items-center justify-center overflow-hidden">
+                {/* Agar image nahi hai to icon dikhayega */}
+                <BiUser className="text-gray-400" size={24} />
+              </div>
+            </div>
           </div>
-          <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-orange-600 to-yellow-400 flex items-center justify-center font-bold text-white shadow-lg">
-            <img 
-                  src="https://api.dicebear.com/7.x/avataaars/svg?seed=Alishba" 
-                  alt="Avatar" 
-                  className="w-full h-full rounded-full bg-[#11141d] object-cover"
-                />
-          </div>
-          <BiChevronDown className="text-gray-500" />
         </div>
       </div>
-    </div>
+    </nav>
   );
 }
